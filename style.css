@@ -3,7 +3,7 @@
 :root {
   --color_orange: rgb(255, 128, 0);
   --color_grey_dark: rgb(130, 130, 130);
-  --color_gry_bright: rgb(245, 245, 245);
+  --color_grey_bright: rgb(245, 245, 245);
 }
 
 .content_container {
@@ -22,6 +22,11 @@ h1 {
 
 h2 {
   font-size: 20px;
+  padding: 0px 0px 16px 8px;
+}
+
+h3 {
+  padding-bottom: 8px;
 }
 
 .plr_16 {
@@ -78,8 +83,9 @@ main {
 .menuLinks {
   display: flex;
   align-items: center;
-  background-color: var(--color_gry_bright);
+  background-color: var(--color_grey_bright);
   gap: 16px;
+  margin-bottom: 8px;
 }
 
 .menuLinks img {
@@ -97,8 +103,29 @@ main {
   background-image: url(./assets/img/bg_hauptgerichte.png);
   background-size: cover;
   background-position: center;
-  height: 80px;
+  height: 120px;
 }
+
+.single_dish {
+    border: 2px solid var(--color_grey_bright);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 16px;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--color_orange);
+    padding-top: 8px;
+}
+
+.side_dishes_header_background {
+  background-image: url(./assets/img/bg_beilagen.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+}
+
 
 /***** Footer *****/
 
@@ -106,7 +133,7 @@ footer {
   display: flex;
   align-items: center;
   height: 60px;
-  background-color: var(--color_grey);
+  background-color: var(--color_grey_dark);
   color: white;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }

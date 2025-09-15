@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="./styles/assets.css" />
     <link rel="stylesheet" href="./styles/basket.css" />
   </head>
-  <body>
-     <!-- onload="renderMenuItems()" -->
+  <body onload="renderMenuItems()">
     <header class="atf_header">
       <div class="content_container">
         <img
@@ -38,19 +37,30 @@
       <div class="content_container">
         <nav class="menuLinks">
           <img src="./assets/icons/arrow_orange.png" alt="Pfeil zur Dekoration">
-          <a href="#">Hauptgerichte</a>
+          <a href="#main_dishes">Hauptgerichte</a>
           <a href="#">Beilagen</a>
         </nav>
       </div>
 
       <div class="content_container">
+
         <article class="main_dishes plr_16">
           <header class="main_dishes_header">
             <div class="main_dishes_header_background"></div>
             <h2>Hauptgerichte</h2>
           </header>
+          <section id="main_dishes_details" class="main_dishes_details"></section>
+
+        <article class="side_dishes plr_16">
+          <header class="side_dishes_header">
+            <div class="side_dishes_header_background"></div>
+            <h2>Beilagen</h2>
+          </header>  
+          <section id="side_dishes_details" class="side_dishes_details"></section>
+        
 
         </article>
+
       </div>
 
     </main>
