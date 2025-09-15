@@ -1,4 +1,4 @@
-let myDishes = [
+let mainDishes = [
   {
     "name": "Green Bowl",
     "price": 11.9,
@@ -23,5 +23,24 @@ let myDishes = [
     "name": "Soulfood Ruhrpott",
     "price": 11.9,
     "description": "Pasta aus roten Linsen mit cremiger Kürbis-Salbei-Sauce, dazu karamellisierte Walnüsse und Rucola",
+  }
+];
+
+
+let sideDishes = [
+  {
+    "name": "Süßkartoffel-Pommes",
+    "price": 4.5,
+    "description": "Knusprige Süßkartoffel-Pommes mit hausgemachter Limetten-Aioli"
+  },
+  {
+    "name": "Ofengemüse Pottstyle",
+    "price": 4.9,
+    "description": "Bunte Mischung aus Ofengemüse der Saison mit frischen Kräutern"
+  },
+  {
+    "name": "Grünkohl-Chips",
+    "price": 3.5,
+    "description": "Knusprige Grünkohlchips, leicht gesalzen – der gesunde Snackklassiker"
   }
 ];
