@@ -8,20 +8,58 @@
 
     <script src="./scripts/db.js"></script>
     <script src="./scripts/template.js"></script>
-    
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./styles/fonts.css" />
     <link rel="stylesheet" href="./styles/standard.css" />
     <link rel="stylesheet" href="./styles/assets.css" />
     <link rel="stylesheet" href="./styles/basket.css" />
-    
   </head>
   <body>
-    <header></header>
+     <!-- onload="renderMenuItems()" -->
+    <header class="atf_header">
+      <div class="content_container">
+        <img
+          src="./assets/icons/Bestell App- Logo.svg"
+          alt="Bestell App-Logo"
+        />
+      </div>
+    </header>
 
-    <main></main>
+    <main>
+      <div class="content_container">
+        <section class="company">
+          <div class="company_background"></div>
+          <h1 tabindex="-1">PottGemüse</h1>
+          <p class="company_evaluation">Bewertung (4,2 von 5 Sternen)</p>
+        </section>
+      </div>
 
-    <footer></footer>
+      <div class="content_container">
+        <nav class="menuLinks">
+          <img src="./assets/icons/arrow_orange.png" alt="Pfeil zur Dekoration">
+          <a href="#">Hauptgerichte</a>
+          <a href="#">Beilagen</a>
+        </nav>
+      </div>
+
+      <div class="content_container">
+        <article class="main_dishes plr_16">
+          <header class="main_dishes_header">
+            <div class="main_dishes_header_background"></div>
+            <h2>Hauptgerichte</h2>
+          </header>
+
+        </article>
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="content_container">
+        <p>© 2025 – Dani Schomaker</p>
+      </div>
+    </footer>
 
     <script src="./script.js"></script>
   </body>

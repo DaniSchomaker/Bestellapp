@@ -1,0 +1,112 @@
+/***** General *****/
+
+:root {
+  --color_orange: rgb(255, 128, 0);
+  --color_grey_dark: rgb(130, 130, 130);
+  --color_gry_bright: rgb(245, 245, 245);
+}
+
+.content_container {
+  margin: 0 auto; /* damit der Content in der Mitte des Screens angezeigt wird und nicht linksbündig  */
+  padding: 0;
+  max-width: 1440px;
+  /* width: 100%;  */
+  /* wird gebraucht, weil der header eine Flexbox hat --> 100% heißt, "nimm so viel Platz wie möglich ein (bis zur max-width-Grenze) */
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 26px;
+  margin: 8px 16px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.plr_16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/***** Header *****/
+
+header .content_container {
+  /* Der .content_container wird nur für den header zur Flexbox */
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.atf_header {
+  height: 80px;
+  background-color: var(--color_orange);
+  background-color: var(--color_orange);
+}
+
+.atf_header img {
+  height: 48px;
+  object-fit: contain;
+}
+
+/***** Body/Main *****/
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  /* color: white;
+  background-color: var(--color_bg_main);
+  padding-bottom: 40px; */
+}
+
+.company_background {
+  background-image: url(./assets/img/bg_pottgemüse.png);
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+}
+
+.company_evaluation {
+  color: var(--color_orange);
+  margin: 0px 16px 8px 16px;
+}
+.menuLinks {
+  display: flex;
+  align-items: center;
+  background-color: var(--color_gry_bright);
+  gap: 16px;
+}
+
+.menuLinks img {
+  height: 24px;
+  object-fit: contain;
+  margin: 8px 0px 8px 16px;
+}
+
+.menuLinks a {
+  font-weight: bold;
+  color: var(--color_grey_dark);
+}
+
+.main_dishes_header_background {
+  background-image: url(./assets/img/bg_hauptgerichte.png);
+  background-size: cover;
+  background-position: center;
+  height: 80px;
+}
+
+/***** Footer *****/
+
+footer {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: var(--color_grey);
+  color: white;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
