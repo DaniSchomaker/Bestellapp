@@ -52,6 +52,8 @@ header .content_container {
 .atf_header img {
   height: 48px;
   object-fit: contain;
+  /* padding-left: 16px; */
+  margin-left: 16px;
 }
 
 /***** Body/Main *****/
@@ -67,6 +69,17 @@ main {
   /* color: white;
   background-color: var(--color_bg_main);
   padding-bottom: 40px; */
+}
+
+.content_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.content {
+  width: calc(100% - 300px);
+  padding: 16px;
 }
 
 .company_background {
@@ -107,16 +120,28 @@ main {
 }
 
 .single_dish {
-    border: 2px solid var(--color_grey_bright);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 8px 8px 8px 8px;
-    margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 2px solid var(--color_grey_bright);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px 8px 8px 8px;
+  margin-bottom: 16px;
+  gap: 8px;
 }
 
 .price {
-    font-weight: 700;
-    color: var(--color_orange);
-    padding-top: 8px;
+  font-weight: 700;
+  color: var(--color_orange);
+  padding-top: 8px;
+}
+
+.add_to_basket_button img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  border: 2px solid var(--color_grey_bright);
+  padding: 4px 4px;
 }
 
 .side_dishes_header_background {
@@ -125,7 +150,6 @@ main {
   background-position: center;
   height: 120px;
 }
-
 
 /***** Footer *****/
 
