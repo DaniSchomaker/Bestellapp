@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./styles/assets.css" />
     <link rel="stylesheet" href="./styles/basket.css" />
   </head>
-  <body onload="renderMenuItems()">
+  <body onload="init()">
     <header class="atf_header">
       <div class="content_container">
         <img
@@ -72,15 +72,19 @@
             </article>
           </div>
         </div>
+
         <section class="basket_wrapper">
           <div class="basket">
             <h2>Warenkorb</h2>
-            <div class="basket_seperator"></div>
             <div id="basket_items" class="basket_items"></div>
-            <div class="basket_seperator"></div>
           </div>
         </section>
       </div>
+
+        <section class="basket_max700px d_none">
+           <label for="Warenkorb"></label> 
+           <button>Warenkorb</button>
+        </section>
     </main>
 
 
