@@ -2,7 +2,8 @@
 
 :root {
   --color_orange: rgb(255, 128, 0);
-  --color_grey_dark: rgb(130, 130, 130);
+  --color_green_dark: rgb(0, 100, 90);
+  --color_grey_dark: rgb(85, 85, 85);
   --color_grey_bright: rgb(245, 245, 245);
 }
 
@@ -45,8 +46,9 @@ header .content_container {
 
 .atf_header {
   height: 80px;
-  background-color: var(--color_orange);
-  background-color: var(--color_orange);
+  /* background-color: var(--color_orange); */
+  background-color: rgb(255, 128, 0);
+  /* ändern */
 }
 
 .atf_header img {
@@ -79,7 +81,7 @@ main {
 
 .content {
   width: calc(100% - 300px);
-  padding: 16px;
+  /* padding: 0px 16px; */
 }
 
 .company_background {
@@ -90,7 +92,6 @@ main {
 }
 
 .company_evaluation {
-  color: var(--color_orange);
   margin: 0px 16px 8px 16px;
 }
 .menuLinks {
@@ -132,7 +133,6 @@ main {
 
 .price {
   font-weight: 700;
-  color: var(--color_orange);
   padding-top: 8px;
 }
 
@@ -160,4 +160,17 @@ footer {
   background-color: var(--color_grey_dark);
   color: white;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/***** Queries *****/
+
+@media (max-width: 700px) {
+  .basket_wrapper {
+    display: none;
+  }
+
+  .content {
+  width: 100%;
+  padding: 0;
+}
 }
