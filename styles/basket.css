@@ -3,25 +3,34 @@
   flex-grow: 1;
   border: 2px solid var(--color_grey_bright);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  /* padding: 0px 16px 16px 16px; */
+  /* padding: 16px; */
+  padding: 0px 16px 16px 16px;
 }
 
 .basket {
   width: 100%;
-  height: 400px;
+  height: 100vh;
   position: sticky;
+  overflow-y: auto; /* bei Bedarf erscheint ein vertikaler Scrollbalken */
+  overflow-x: hidden; /* es erscheint KEIN horizontaler Scrollbalken */
   top: 0;
 }
 
 .basket h2 {
   text-align: center;
+  border-bottom: 1px solid var(--color_grey_dark);
+  margin: 16px 0px;
 }
 
 /* .basket h3 {
   margin-top: 16px;
 } */
 
+.empty_basket {
+  text-align: center;
+}
+
+/* raus? */
 .basket_seperator {
   width: 100%;
   height: 1px;
@@ -39,4 +48,19 @@
   height: 24px;
   width: 24px;
   object-fit: contain;
+}
+
+.calc_total_price {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--color_grey_dark);
+  padding-top: 16px;
+}
+
+.total_price {
+  font-weight: bold;
+}
+
+.calc_total_price_Euro {
+  text-align: end;
 }
