@@ -78,7 +78,7 @@
   margin: 16px 0px;
 }
 
-.basket_max700px {
+.basket_max750px {
   display: none;
 }
 
@@ -106,8 +106,8 @@
 
 }
 
-@media (max-width: 700px) {
-  .basket_max700px {
+@media (max-width: 750px) {
+  .basket_max750px {
     display: block;
   }
 
