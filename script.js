@@ -1,4 +1,7 @@
-let basket = []; 
+let basket = [];
+let basketRef = document.getElementById("basket_items"); 
+let basketDialogRef = document.getElementById("basket_dialog"); 
+
 
 function init() {
   renderMainDishes();
@@ -37,18 +40,20 @@ function decreaseMainDishFromBasket(dishIndex) {
 }
 
 function deleteMainDishFromBasket(dishIndex) {
-  let position = basket.indexOf(dishIndex); 
+  let position = basket.indexOf(dishIndex);
   if (position !== -1) {
     basket.splice(position, 1); // Gericht wird aus dem basket-Array entfernt
   }
-  mainDishes[dishIndex].amount = 0; 
+  mainDishes[dishIndex].amount = 0;
   renderBasket();
 }
+
+
 
 function renderBasket() {
   let delivery = 5;
   let subtotal = 0;
-  let basketRef = document.getElementById("basket_items");
+
   basketRef.innerHTML = "";
 
   if (basket.length === 0) {
@@ -61,7 +66,25 @@ function renderBasket() {
 
     basketRef.innerHTML += getBasketMainDishTemplate(dishIndex);
     subtotal += mainDishes[dishIndex].amount * mainDishes[dishIndex].price;
-
   }
   basketRef.innerHTML += getBasketTotalsTemplate(subtotal, delivery);
+}
+
+
+
+function openBasketDialog() {
+  basketDialogRef.showModal(); // .showModal = Dialog/Lightbox wird geöffnet
+}
+
+function closeBasketDialog() {
+  basketDialogRef.close();
+}
+
+function orderSuccessful() {
+  for (let i = 0; i < mainDishes.length; i++) {
+    mainDishes[i].amount = 0;
+  }
+  basket.length = 0;
+
+  basketRef.innerHTML = getOrderSuccessful();
 }

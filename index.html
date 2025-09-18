@@ -26,6 +26,8 @@
     </header>
 
     <main>
+
+
       <div class="content_wrapper">
         <div class="content">
           <div class="content_container">
@@ -65,10 +67,12 @@
                 <div class="side_dishes_header_background"></div>
                 <h2>Beilagen</h2>
               </header>
-              <section
-                id="side_dishes_details"
-                class="side_dishes_details"
-              ></section>
+              <section id="side_dishes_details" class="side_dishes_details">
+                <p class="single_dish">
+                  Lust auf Süßkartoffel-Pommes und Grünkohl-Chips? <br />
+                  Hier gibt es bald leckere Beilagen...
+                </p>
+              </section>
             </article>
           </div>
         </div>
@@ -81,15 +85,30 @@
         </section>
       </div>
 
-        <section class="basket_max700px d_none">
-           <label for="Warenkorb"></label> 
-           <button>Warenkorb</button>
-        </section>
+      <!-- <section class="basket_max700px plr_16"> -->
+      <!-- <div class="basket_sticky_wrap"> -->
+      <!-- <label for="Warenkorb"></label>  -->
+      <!-- <button onclick="openBasketDialog()" class="basket_button"> -->
+      <!-- Warenkorb -->
+      <!-- </button> -->
+      <!-- </div> -->
+      <!-- </section> -->
+
+      <dialog id="basket_dialog" class="basket_dialog">
+        <header></header>
+        <section></section>
+        <footer></footer>
+      </dialog>
     </main>
 
+    <section class="basket_max700px">
+      <div class="basket_sticky_wrap">
+        <button onclick="openBasketDialog()" class="basket_button">Warenkorb</button>
+      </div>
+    </section>
 
 
-    <footer>
+    <footer class="site_footer">
       <div class="content_container">
         <p>© 2025 – Dani Schomaker</p>
       </div>

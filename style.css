@@ -2,7 +2,7 @@
 
 :root {
   --color_orange: rgb(255, 128, 0);
-  --color_green_dark: rgb(0, 100, 90);
+  --color_blue: rgb(0, 123, 255);
   --color_grey_dark: rgb(85, 85, 85);
   --color_grey_bright: rgb(245, 245, 245);
 }
@@ -34,6 +34,12 @@ h3 {
   padding-left: 16px;
   padding-right: 16px;
 }
+
+.d_none {
+  display: none;
+}
+
+
 
 /***** Header *****/
 
@@ -136,12 +142,18 @@ main {
   padding-top: 8px;
 }
 
+
 .add_to_basket_button img {
   height: 40px;
   width: 40px;
   object-fit: contain;
   border: 2px solid var(--color_grey_bright);
   padding: 4px 4px;
+}
+
+.add_to_basket_button img:hover {
+  background-color: rgb(255, 230, 204);
+  /* transform: scale(1.02); */
 }
 
 .side_dishes_header_background {
@@ -170,7 +182,12 @@ footer {
   }
 
   .content {
-  width: 100%;
-  padding: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  /* .basket_max700px {
+    display: block;
+  } */
 }
-}
+
