@@ -28,7 +28,9 @@ function getBasketMainDishTemplate(dishIndex) {
       <button onclick="addMainDishToBasket(${dishIndex})">
         <img src="./assets/icons/plus_orange.png" alt="Button: Anzahl um eins erhöhen">
       </button>   
-      <p> ${(mainDishes[dishIndex].amount * mainDishes[dishIndex].price).toFixed(2)} € </p>
+      <p> ${(
+        mainDishes[dishIndex].amount * mainDishes[dishIndex].price
+      ).toFixed(2)} € </p>
       <button onclick="deleteMainDishFromBasket(${dishIndex})">
         <img src="./assets/icons/trashcan_orange_pixabay.png" alt="Button: Gericht löschen">
       </button>
@@ -49,6 +51,19 @@ function getBasketTotalsTemplate(subtotal, delivery) {
         <p>5.00 €</p>
         <p class="total_price">${(subtotal + delivery).toFixed(2)} €</p>
       </div> 
-    </div>      
+    </div>  
+    <div> 
+      <button onclick="orderSuccessful()" class="submit_order_button"> Bestellung abschicken</button>   
+    </div>
+  `;
+}
+
+function getOrderSuccessful() {
+  return `
+    <div class="order_success">
+      <h3>Glück auf & danke! 🌱</h3>
+      <p>PottGemüse ist auf dem Weg zu dir – frisch, lecker, ohne Schnickschnack.</p>
+      <button onclick="renderBasket()" class="new_order_button">Weiter bestellen</button>
+    </div>
   `;
 }
