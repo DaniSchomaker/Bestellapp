@@ -22,10 +22,6 @@
   margin: 16px 0px;
 }
 
-/* .basket h3 {
-  margin-top: 16px;
-} */
-
 .empty_basket {
   text-align: center;
 }
@@ -49,8 +45,6 @@
   width: 24px;
   object-fit: contain;
 }
-
-
 
 .calc_total_price {
   display: flex;
@@ -92,8 +86,6 @@
   transform: scale(0.98);
 }
 
-
-
 .order_success {
   text-align: center;
 }
@@ -103,36 +95,45 @@
 .basket_dialog {
   width: 100%;
   height: 100%;
+}
 
+.basket_dialog {
+  margin: 0;
+  padding: 0;
+  border: 20px solid black;
+
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
 }
 
 @media (max-width: 750px) {
   .basket_max750px {
     display: block;
   }
-
+  /* doppelt? */
 
   .basket_sticky_wrap {
-    /* position: sticky; */
-    /* bottom: 0; */
-    background: var(--color_blue);
-    /* z-index: 10;  */
-    /* über Content, unter Footer */
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+    background: white;
   }
 
   .basket_button {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 30px; /* Button ist immer 50px über dem unteren Rand */
+
     display: block;
-    width: 100%;
-    margin: 0; 
+    width: calc(100% - 32px);
+    margin: 0 16px;
     border: 0;
     padding: 16px;
     font-size: 18px;
     font-weight: 700;
     color: white;
-
-
+    background: var(--color_blue);
+    border-radius: 8px;
   }
-
-
 }
-
