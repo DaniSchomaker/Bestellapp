@@ -73,6 +73,7 @@ function renderBasket() {
 
 
 function openBasketDialog() {
+  let basketDialogRef = document.getElementById("basket_mobile_dialog"); 
   basketDialogRef.showModal(); // .showModal = Dialog/Lightbox wird geöffnet
 }
 
