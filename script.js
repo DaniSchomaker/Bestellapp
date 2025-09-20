@@ -78,6 +78,7 @@ function openBasketDialog() {
 }
 
 function closeBasketDialog() {
+  let basketDialogRef = document.getElementById("basket_mobile_dialog"); 
   basketDialogRef.close();
 }
 

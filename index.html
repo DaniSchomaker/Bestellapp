@@ -26,14 +26,16 @@
     </header>
 
     <main>
-
-
       <div class="content_wrapper">
         <div class="content">
           <div class="content_container">
             <section class="company">
               <div class="company_background"></div>
-              <img src="./assets/icons/pottgemüse_icons.png" alt="PottGemüse Icon" class="company_icon" />
+              <img
+                src="./assets/icons/pottgemüse_icons.png"
+                alt="PottGemüse Icon"
+                class="company_icon"
+              />
               <h1 tabindex="-1">PottGemüse</h1>
               <p class="company_evaluation">Bewertung (4,2 von 5 Sternen)</p>
             </section>
@@ -102,21 +104,20 @@
         <footer></footer>
       </dialog> -->
 
-
-
-
-    <section class="basket_mobile">
-      <!-- <div class="basket_sticky_wrap"> -->
-        <button onclick="openBasketDialog()" class="basket_button">Warenkorb</button>
-      <!-- </div> -->
-       <dialog id="basket_mobile_dialog" class="basket_mobile_dialog">
-
-
-       </dialog>
-    </section>
-
+      <section class="basket_mobile">
+        <!-- <div class="basket_sticky_wrap"> -->
+        <button onclick="openBasketDialog()" class="basket_button">
+          Warenkorb
+        </button>
+        <!-- </div> -->
+        <dialog id="basket_mobile_dialog" class="basket_mobile_dialog">
+          <button onclick="closeBasketDialog()" id="close_button" class="close_button">Zurück zur Menüauswahl</button>
+          <h2 class="basket_dialog_header">Warenkorb</h2>
+          <div id="basket_items" class="basket_items"></div>
+        </dialog>
+      </section>
     </main>
-    
+
     <footer class="site_footer">
       <div class="content_container">
         <p>© 2025 – Dani Schomaker</p>

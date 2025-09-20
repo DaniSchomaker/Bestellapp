@@ -77,12 +77,14 @@
 }
 
 .basket_button:hover,
-.submit_order_button:hover {
+.submit_order_button:hover,
+.close_button:hover {
   transform: scale(1.02);
 }
 
 .basket_button:active,
-.submit_order_button:active {
+.submit_order_button:active,
+.close_button:active {
   transform: scale(0.98);
 }
 
@@ -135,5 +137,31 @@
     color: white;
     background: var(--color_blue);
     /* border-radius: 8px; */
+  }
+
+  .basket_mobile_dialog {
+    height: 100vh;
+    width: 100vw;
+    /* margin: 0 !important; */
+    /* padding: 0 !important; */
+    border: none;
+  }
+
+  .basket_dialog_header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--color_grey_dark);
+  }
+
+  .close_button {
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    border: none;
+    padding: 8px;
+    margin-bottom: 16px; 
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background: var(--color_blue);
   }
 }
