@@ -1,6 +1,8 @@
 let basket = [];
 let basketRef = document.getElementById("basket_items"); 
-let basketDialogRef = document.getElementById("basket_dialog"); 
+// let basketDialogRef = document.getElementById("basket_dialog");
+let basketMobileRef = document.getElementById("basket_mobile_items"); 
+
 
 
 function init() {
@@ -55,9 +57,11 @@ function renderBasket() {
   let subtotal = 0;
 
   basketRef.innerHTML = "";
+  basketMobileRef.innerHTML = "";
 
   if (basket.length === 0) {
     basketRef.innerHTML = `<p class="empty_basket">Pott leer, Gemüse her!</p>`; // Template?
+    basketMobileRef.innerHTML = `<p class="empty_basket">Pott leer, Gemüse her!</p>`;
     return;
   }
 
@@ -65,9 +69,11 @@ function renderBasket() {
     let dishIndex = basket[basketIndex]; // Holt aus dem basket-Array an der Position basketIndex den gespeicherten Wert (Index eines Gerichts im mainDishes-Array) und speichert ihn in der Variable dishIndex
 
     basketRef.innerHTML += getBasketMainDishTemplate(dishIndex);
+    basketMobileRef.innerHTML += getBasketMainDishTemplate(dishIndex);
     subtotal += mainDishes[dishIndex].amount * mainDishes[dishIndex].price;
   }
   basketRef.innerHTML += getBasketTotalsTemplate(subtotal, delivery);
+  basketMobileRef.innerHTML += getBasketTotalsTemplate(subtotal, delivery);
 }
 
 
@@ -89,4 +95,5 @@ function orderSuccessful() {
   basket.length = 0;
 
   basketRef.innerHTML = getOrderSuccessful();
+  basketMobileRef.innerHTML = getOrderSuccessful();
 }

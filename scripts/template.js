@@ -62,7 +62,8 @@ function getOrderSuccessful() {
   return `
     <div class="order_success">
       <h3>Glück auf & danke! 🌱</h3>
-      <p>PottGemüse ist auf dem Weg zu dir – frisch, lecker, ohne Schnickschnack.</p>
+      <p>PottGemüse ist auf dem Weg zu dir </p> 
+      <p>– frisch, lecker, ohne Schnickschnack.</p>
       <button onclick="renderBasket()" class="new_order_button">Neue Bestellung aufgeben</button>
     </div>
   `;
