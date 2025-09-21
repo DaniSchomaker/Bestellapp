@@ -2,6 +2,7 @@
 
 :root {
   --color_orange: rgb(255, 128, 0);
+  --color_orange_light: rgb(255, 230, 204);
   --color_blue: rgb(0, 123, 255);
   --color_grey_dark: rgb(85, 85, 85);
   --color_grey_bright: rgb(245, 245, 245);
@@ -13,6 +14,11 @@
   max-width: 1440px;
   /* width: 100%;  */
   /* wird gebraucht, weil der header eine Flexbox hat --> 100% heißt, "nimm so viel Platz wie möglich ein (bis zur max-width-Grenze) */
+}
+
+dialog { 
+    max-width: 100%;
+    max-height: 100%;
 }
 
 h1 {
@@ -51,7 +57,7 @@ header .content_container {
 .atf_header {
   height: 80px;
   /* background-color: var(--color_orange); */
-  background-color: rgb(255, 128, 0);
+  background-color: var(--color_orange);
   /* ändern */
 }
 
@@ -103,10 +109,10 @@ main {
 .company_icon {
   position: absolute;
   top: 100px;
-  left: 50%; /* horizontal in die Mitte: Warum klappt das nicht? */
-  transform: translateX(-50%);
-  /* exakte Zentrierung */
+  left: 50%; /* zentriert die LINKE KANTE des icons auf der X-Achse */
   width: 88px;
+  margin-left: -44px; 
+  /* verschiebt das icon um die Hälfte der Breite nach links, sodass es insgesamt horizontal zentriert ist */  
   object-fit: contain;
 }
 
@@ -165,7 +171,7 @@ main {
 
 .add_to_basket_button img:hover {
   background-color: rgb(255, 230, 204);
-  /* transform: scale(1.02); */
+  transform: scale(1.01);
 }
 
 .side_dishes_header_background {
@@ -178,6 +184,9 @@ main {
 .placeholder_white {
   height: 50px;
 }
+/* dialog {
+  margin: 0;
+ } */
 
 /***** Footer *****/
 
