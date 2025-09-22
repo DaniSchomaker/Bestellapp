@@ -88,10 +88,10 @@
         </div>
 
         <section class="basket_mobile">
-          <button onclick="openBasketDialog()" class="basket_button">
+          <button aria-haspopup="dialog" aria-controls="basket_mobile_dialog" onclick="openBasketDialog()" class="basket_button">
             Warenkorb
           </button>
-          <dialog id="basket_mobile_dialog" class="basket_mobile_dialog">
+          <dialog id="basket_mobile_dialog" aria-labelledby="dialog_title" class="basket_mobile_dialog">
             <button
               onclick="closeBasketDialog()"
               id="close_button"
@@ -99,7 +99,7 @@
             >
               Zurück zur Menüauswahl
             </button>
-            <h2 class="basket_dialog_header">Warenkorb</h2>
+            <h2 id="dialog_title" class="basket_dialog_header">Warenkorb</h2>
             <div id="basket_mobile_items" class="basket_mobile_items"></div>
           </dialog>
         </section>
