@@ -1,9 +1,6 @@
 let basket = [];
 let basketRef = document.getElementById("basket_items"); 
-// let basketDialogRef = document.getElementById("basket_dialog");
 let basketMobileRef = document.getElementById("basket_mobile_items"); 
-
-
 
 function init() {
   renderMainDishes();
@@ -50,8 +47,6 @@ function deleteMainDishFromBasket(dishIndex) {
   renderBasket();
 }
 
-
-
 function renderBasket() {
   let delivery = 5;
   let subtotal = 0;
@@ -60,7 +55,7 @@ function renderBasket() {
   basketMobileRef.innerHTML = "";
 
   if (basket.length === 0) {
-    basketRef.innerHTML = `<p class="empty_basket">Pott leer, Gemüse her!</p>`; // Template?
+    basketRef.innerHTML = `<p class="empty_basket">Pott leer, Gemüse her!</p>`; // Da nur eine Zeile: nicht als Template ausgelagert
     basketMobileRef.innerHTML = `<p class="empty_basket">Pott leer, Gemüse her!</p>`;
     return;
   }
@@ -76,8 +71,6 @@ function renderBasket() {
   basketMobileRef.innerHTML += getBasketTotalsTemplate(subtotal, delivery);
 }
 
-
-
 function openBasketDialog() {
   let basketDialogRef = document.getElementById("basket_mobile_dialog"); 
   basketDialogRef.showModal(); // .showModal = Dialog/Lightbox wird geöffnet
@@ -89,8 +82,8 @@ function closeBasketDialog() {
 }
 
 function orderSuccessful() {
-  for (let i = 0; i < mainDishes.length; i++) {
-    mainDishes[i].amount = 0;
+  for (let dishIndex = 0; dishIndex < mainDishes.length; dishIndex++) {
+    mainDishes[dishIndex].amount = 0;
   }
   basket.length = 0;
 

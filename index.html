@@ -26,9 +26,9 @@
     </header>
 
     <main>
-      <div class="content_wrapper">
-        <div class="content">
-          <div class="content_container">
+      <div class="content_container">
+        <div class="content_wrapper">
+          <div class="content">
             <section class="company">
               <div class="company_background"></div>
               <img
@@ -39,86 +39,74 @@
               <h1 tabindex="-1">PottGemüse</h1>
               <p class="company_evaluation">Bewertung (4,2 von 5 Sternen)</p>
             </section>
+
+            <div class="content_container">
+              <nav class="menuLinks">
+                <img
+                  src="./assets/icons/arrow_orange.png"
+                  alt="Pfeil zur Dekoration"
+                />
+                <a href="#main_dishes">Hauptgerichte</a>
+                <a href="#side_dishes">Beilagen</a>
+              </nav>
+            </div>
+
+            <div class="content_container">
+              <article id="main_dishes" class="main_dishes plr_16">
+                <header class="main_dishes_header">
+                  <div class="main_dishes_header_background"></div>
+                  <h2>Hauptgerichte</h2>
+                </header>
+                <section
+                  id="main_dishes_details"
+                  class="main_dishes_details"
+                ></section>
+              </article>
+
+              <article id="side_dishes" class="side_dishes plr_16">
+                <header class="side_dishes_header">
+                  <div class="side_dishes_header_background"></div>
+                  <h2>Beilagen</h2>
+                </header>
+                <section class="side_dishes_details">
+                  <p class="single_dish">
+                    Lust auf Süßkartoffel-Pommes und Grünkohl-Chips? <br />
+                    Hier gibt es bald leckere Beilagen...
+                  </p>
+                  <div class="placeholder_white"></div>
+                </section>
+              </article>
+            </div>
           </div>
 
-          <div class="content_container">
-            <!-- Kann ich den Content-Container auch um das ganze main machen? -->
-            <nav class="menuLinks">
-              <img
-                src="./assets/icons/arrow_orange.png"
-                alt="Pfeil zur Dekoration"
-              />
-              <a href="#main_dishes">Hauptgerichte</a>
-              <a href="#side_dishes">Beilagen</a>
-            </nav>
-          </div>
-
-          <div class="content_container">
-            <article id="main_dishes" class="main_dishes plr_16">
-              <header class="main_dishes_header">
-                <div class="main_dishes_header_background"></div>
-                <h2>Hauptgerichte</h2>
-              </header>
-              <section
-                id="main_dishes_details"
-                class="main_dishes_details"
-              ></section>
-            </article>
-
-            <article id="side_dishes" class="side_dishes plr_16">
-              <header class="side_dishes_header">
-                <div class="side_dishes_header_background"></div>
-                <h2>Beilagen</h2>
-              </header>
-              <section id="side_dishes_details" class="side_dishes_details">
-                <p class="single_dish">
-                  Lust auf Süßkartoffel-Pommes und Grünkohl-Chips? <br />
-                  Hier gibt es bald leckere Beilagen...
-                </p>
-                <div class="placeholder_white"></div>
-              </section>
-            </article>
-          </div>
+          <section class="basket_wrapper">
+            <div class="basket">
+              <h2>Warenkorb</h2>
+              <div id="basket_items"></div>
+            </div>
+          </section>
         </div>
 
-        <section class="basket_wrapper">
-          <div class="basket">
-            <h2>Warenkorb</h2>
-            <div id="basket_items" class="basket_items"></div>
-          </div>
+        <section class="basket_mobile">
+          <button onclick="openBasketDialog()" class="basket_button">
+            Warenkorb
+          </button>
+          <dialog id="basket_mobile_dialog" class="basket_mobile_dialog">
+            <button
+              onclick="closeBasketDialog()"
+              id="close_button"
+              class="close_button"
+            >
+              Zurück zur Menüauswahl
+            </button>
+            <h2 class="basket_dialog_header">Warenkorb</h2>
+            <div id="basket_mobile_items" class="basket_mobile_items"></div>
+          </dialog>
         </section>
       </div>
-
-      <!-- <section class="basket_max750px plr_16"> -->
-      <!-- <div class="basket_sticky_wrap"> -->
-      <!-- <label for="Warenkorb"></label>  -->
-      <!-- <button onclick="openBasketDialog()" class="basket_button"> -->
-      <!-- Warenkorb -->
-      <!-- </button> -->
-      <!-- </div> -->
-      <!-- </section> -->
-
-      <!-- <dialog id="basket_dialog" class="basket_dialog">
-        <header></header>
-        <section></section>
-        <footer></footer>
-      </dialog> -->
-
-      <section class="basket_mobile">
-        <!-- <div class="basket_sticky_wrap"> -->
-        <button onclick="openBasketDialog()" class="basket_button">
-          Warenkorb
-        </button>
-        <!-- </div> -->
-        <dialog id="basket_mobile_dialog" class="basket_mobile_dialog">
-          <button onclick="closeBasketDialog()" id="close_button" class="close_button">Zurück zur Menüauswahl</button>
-          <h2 class="basket_dialog_header">Warenkorb</h2>
-          <div id="basket_mobile_items" class="basket_mobile_items"></div>
-        </dialog>
-      </section>
     </main>
 
-    <footer class="site_footer">
+    <footer>
       <div class="content_container">
         <p>© 2025 – Dani Schomaker</p>
       </div>

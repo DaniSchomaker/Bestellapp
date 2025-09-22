@@ -35,7 +35,7 @@ function getBasketMainDishTemplate(dishIndex) {
         <img src="./assets/icons/trashcan_orange_pixabay.png" alt="Button: Gericht löschen">
       </button>
     </div>    
-    `;
+  `;
 }
 
 function getBasketTotalsTemplate(subtotal, delivery) {
